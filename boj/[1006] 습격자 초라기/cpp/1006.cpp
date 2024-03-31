@@ -81,9 +81,6 @@ int main(){
             input[1][0] = tmp_up;
             input[1][1] = tmp_down;
         }
-
-        
-
         cout << ans << '\n';
     }
     return 0;
