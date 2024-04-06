@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 
-
 #define MAX 47000
 
 using namespace std;
@@ -11,7 +10,7 @@ vector<int> prime;
 int sqCnt[MAX];
 
 void getPrime();
-long long getCnt(int idx, int num, int x, bool include);
+int getCnt(int idx, int num, int x, bool include);
 int main(){
     ios::sync_with_stdio(false);
 
@@ -51,9 +50,9 @@ void getPrime() {
     }
 }
 // idx : 소수 인덱스, num : 현재까지의 소수 곱, x : 입력값, include : 현재 소수를 포함인가 배제인가
-long long getCnt(int idx, int num, int x, bool include) {
-    long long result, primeComb, ret = 0;
-    int cnt;
+int getCnt(int idx, int num, int x, bool include) {
+    int result, ret = 0, cnt;
+    long long primeComb;
     for(int i = idx; i < prime.size(); i++) {
         primeComb = num*prime[i];
 
